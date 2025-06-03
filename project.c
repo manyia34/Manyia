@@ -31,7 +31,7 @@ void newRecord(char date[], char vehiclename[], char vehiclenumber[], char name[
     head = newNode;
     printf("Record Enter sucessfully !!\n");
 }
-// Function to delete a record from Record book
+
 
 // Functions to check the record by vechile Number
 void searchRecords(char vehiclenumber[])
