@@ -1,0 +1,60 @@
+import random
+# define the number to the object 
+variable = {
+    "snake" : 1,
+    "gun" : 2,
+    "water" : 3
+}
+
+# function for return the computer choice 
+def computer(computer_num):
+    if(computer_num == 1):
+        computer_choice = "Snake"
+    elif(computer_num == 2):
+        computer_choice = "Gun"
+    else:
+        computer_choice = "Water"
+    return computer_choice
+
+# function for return the player choice
+def player(player_num):
+    if(player_num == 1):
+        player_choice = "Snake"
+    elif(player_num == 2):
+        player_choice = "Gun"
+    else:
+        player_choice = "Water"
+    return player_choice
+ 
+# player choice 
+player_num = int(input("Enter (1.Snake) , (2.Gun) , (3.Water) : "))
+player_choose = player(player_num)
+if player_num not in [1, 2, 3]:
+    print("Invalid choice! Please enter 1, 2, or 3.")
+    exit()
+
+# computer choice
+computer_num = random.randint(1,3)
+computer_choose = computer(computer_num)
+
+# printing statement
+print(f"Player choose : {player_choose}")
+print(f"Computer choose : {computer_choose}")
+
+# logic condititon
+if (computer_choose == player_choose):
+    print("Draw")
+elif(player_choose=="Snake" and computer_choose=="Water"):
+    print("Player Won!")
+elif(player_choose=="Gun" and computer_choose=="Snake"):
+    print("Player Won!")
+elif(player_choose=="Water" and computer_choose=="Gun"):
+    print("Player Won!")
+else:
+    print("Computer Won!")
+
+# ending of game
+print("Game end")
+
+
+
